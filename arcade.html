@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#af272f" />
+    <title>Knock the Signs — RED SIGNS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="arcade.css" />
+    <script src="arcade.js" defer></script>
+  </head>
+  <body class="arcade-page">
+    <header>
+      <a class="brand" href="index.html"
+        >RED SIGNS<span class="brand-mark" aria-hidden="true">↗</span></a
+      ><span class="site-note">YOU FOUND THE ARCADE</span>
+      <nav class="story-topnav" aria-label="Main navigation">
+        <a href="index.html">Back to signs ↗</a><a href="contents.html">The story</a>
+      </nav>
+    </header>
+    <main class="arcade-main">
+      <div class="arcade-heading">
+        <div>
+          <p class="arcade-kicker">A LITTLE LESS RULE. A LITTLE MORE PLAY.</p>
+          <h1>Knock the signs.</h1>
+        </div>
+        <button id="arcadeSound" aria-pressed="true">Sound on ◉</button>
+      </div>
+      <div class="arcade-hud">
+        <div><span>SCORE</span><strong id="score">000</strong></div>
+        <div><span>TIME LEFT</span><strong id="time">30</strong></div>
+        <div><span>BEST</span><strong id="best">000</strong></div>
+        <button id="playButton">Play ↗</button>
+      </div>
+      <p id="gameStatus" class="game-status" role="status">
+        30 seconds. Click or tap the signs to knock them down. 10 points per sign; clear a shelf for
+        +50.
+      </p>
+      <div class="cabinet" id="cabinet" aria-label="Road sign shooting gallery"></div>
+      <p class="arcade-instructions">
+        Aim. Click. Clank. Repeat. <span>Keyboard: Tab to a sign, then Enter or Space.</span>
+      </p>
+    </main>
+    <footer>
+      <span class="footer-statement">Stop, Notice, React.</span
+      ><span class="credit">CARINA CHUNG · 2026</span
+      ><a href="index.html">BACK TO THE COLLECTION ↗</a>
+    </footer>
+  </body>
+</html>
