@@ -51,7 +51,7 @@
   letter-spacing: 1.5px;
 }
 .arcade-hud strong {
-  font-family: Highway, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 43px;
   font-weight: 400;
   line-height: 1;
@@ -61,7 +61,7 @@
   color: var(--red);
   border: 0;
   padding: 17px;
-  font-family: Highway, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 26px;
 }
 #playButton:disabled {
@@ -146,7 +146,7 @@
   left: 50%;
   top: 25%;
   transform: translateX(-50%);
-  font-family: Highway, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 35px;
   color: white;
   pointer-events: none;
@@ -157,7 +157,7 @@
   position: absolute;
   right: 0;
   top: -10px;
-  font-family: Highway, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 22px;
   pointer-events: none;
   animation: points-rise 0.8s ease-out forwards;
@@ -269,3 +269,8 @@
     transition: none;
   }
 }
+
+.arcade-heading h1 { font-size: clamp(38px, 5vw, 68px); letter-spacing: -0.045em; }
+.arcade-hud strong { font-weight: 500; font-variant-numeric: tabular-nums; }
+#playButton { font-size: 20px; font-weight: 500; }
+.cabinet { background: #171717; }

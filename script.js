@@ -1099,7 +1099,11 @@ const signObject = document.querySelector("#signObject"),
 const audio = new Audio("assets/metal-clank.mp3");
 audio.preload = "auto";
 audio.volume = 0.6;
-let index = 0,
+function signFromUrl() {
+  const requested = new URLSearchParams(location.search).get("sign");
+  return signs.findIndex((sign) => sign.image.split("/").pop().replace(/\.[^.]+$/, "") === requested);
+}
+let index = Math.max(0, signFromUrl()),
   busy = false,
   sound = true;
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
@@ -1114,6 +1118,9 @@ const loaded = signs.map(
 );
 function render(updateImage = true) {
   const s = signs[index];
+  const url = new URL(location.href);
+  url.searchParams.set("sign", s.image.split("/").pop().replace(/\.[^.]+$/, ""));
+  history.replaceState(null, "", url);
   if (updateImage) signImage.src = s.image;
   signImage.alt = s.title + " road sign";
   document.querySelector("#title").textContent = s.title;
@@ -1275,3 +1282,8 @@ function filterArchive() {
 document.querySelector("#archiveSearch").addEventListener("input", filterArchive);
 filterArchive();
 render();
+
+window.addEventListener("popstate", () => {
+  index = Math.max(0, signFromUrl());
+  render();
+});

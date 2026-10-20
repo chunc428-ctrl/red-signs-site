@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>RED SIGNS — Carina Chung</title>
+    <meta
+      name="description"
+      content="Stop, Notice, React. An interactive collection of red U.S. road signs by Carina Chung."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js?v=sign-links-2" defer></script>
+  </head>
+  <body>
+    <header><a class="brand" href="index.html">RED SIGNS<span class="brand-mark" aria-hidden="true">↗</span></a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="signs.html" aria-current="page">Signs</a><a href="contents.html">The story</a></nav><div class="collection-controls"><button id="soundToggle" aria-pressed="true">Sound on ◉</button><button id="archiveButton">All signs ＋</button></div></header>
+    <main id="signs">
+      <div class="backdrop-type" aria-hidden="true">RED SIGNS</div>
+      <section class="sign-area" aria-label="Interactive road sign">
+        <div class="stage">
+          <div class="ground-shadow"></div>
+          <button
+            id="signObject"
+            class="sign-object"
+            aria-label="Hit the no bicycles sign to see the next sign"
+          >
+            <span class="pole" aria-hidden="true"></span
+            ><img
+              id="signImage"
+              src="assets/no-bicycles.svg"
+              alt="No bicycles road sign"
+              draggable="false"
+            />
+          </button>
+        </div>
+        <p class="hint">
+          <span class="hit-icon" aria-hidden="true">↗</span> HIT THE SIGN.<br />MAKE A LITTLE
+          NOISE.
+        </p>
+      </section>
+      <section class="info">
+        <div class="index-row">
+          <span>THE COLLECTION / U.S.</span><span id="counter">01 / 109</span>
+        </div>
+        <div id="textContent" aria-live="polite" aria-atomic="true">
+          <p class="eyebrow"><span id="category">REGULATORY</span> <span id="code">R5-6</span></p>
+          <h1 id="title">No bicycles</h1>
+          <p id="description">
+            Bicycles may not enter this roadway or area. A red circle and diagonal slash turn a
+            familiar bicycle silhouette into a clear restriction.
+          </p>
+        </div>
+        <button class="next" id="nextButton">
+          <span>Next sign</span><span class="next-arrow" aria-hidden="true">↗</span>
+        </button>
+        <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+      </section>
+    </main>
+    <footer>
+      <span class="footer-statement">Stop, Notice, React.</span
+      ><span class="credit">CARINA CHUNG · 2026</span
+      ><a
+        href="https://en.wikipedia.org/wiki/Road_signs_in_the_United_States"
+        target="_blank"
+        rel="noopener"
+        >IMAGE SOURCES ↗</a
+      >
+    <a class="arcade-corner" href="arcade.html" title="A little arcade detour">Arcade ↗</a></footer>
+    <dialog id="archive" aria-labelledby="archiveTitle">
+      <div class="archive-top">
+        <h2 id="archiveTitle">The collection.</h2>
+        <button id="closeArchive" aria-label="Close collection">Close ×</button>
+      </div>
+      <div class="archive-search">
+        <label for="archiveSearch">Find a sign</label
+        ><input
+          id="archiveSearch"
+          type="search"
+          placeholder="Search by name or sign code"
+          autocomplete="off"
+        /><span id="archiveCount"></span>
+      </div>
+      <div id="archiveGrid"></div>
+    </dialog>
+  </body>
+</html>
