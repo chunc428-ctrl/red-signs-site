@@ -956,7 +956,7 @@ body {
   font-weight: 700;
   font-size: 17vw;
   letter-spacing: -0.055em;
-  -webkit-text-stroke: 1px rgba(255, 249, 241, 0.16);
+  -webkit-text-stroke: 1px rgba(255, 249, 241, 0.28);
 }
 h1 {
   font-weight: 700;
@@ -1075,7 +1075,7 @@ h1[data-length="long"] {
 .arcade-corner:hover { opacity: 1; }
 .home-page .home-main { display: block; padding: 0; height: auto; min-height: 0; max-height: none; overflow: visible; }
 .home-hero { position: relative; max-width: 1600px; margin: auto; padding: 64px 6% 72px; display: grid; grid-template-columns: 1.2fr 1fr; column-gap: 9%; align-items: center; overflow: hidden; }
-.home-outline { position: absolute; z-index: -1; top: 20px; left: 3%; font-size: 17vw; font-weight: 700; white-space: nowrap; letter-spacing: -.055em; color: transparent; -webkit-text-stroke: 1px #fff2; pointer-events: none; }
+.home-outline { position: absolute; z-index: -1; top: 20px; left: 3%; font-size: 17vw; font-weight: 700; white-space: nowrap; letter-spacing: -.055em; color: transparent; -webkit-text-stroke: 1px rgba(255, 249, 241, 0.25); pointer-events: none; }
 .home-kicker { font-size: 10px; line-height: 1.5; letter-spacing: .13em; margin: 0 0 36px; }
 .home-hero > .home-kicker { grid-column: 1/-1; }
 .home-hero h1 { font-size: clamp(64px, 9vw, 138px); letter-spacing: -.065em; line-height: .97; margin: 0 0 32px; }
